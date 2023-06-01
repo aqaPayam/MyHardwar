@@ -2,7 +2,7 @@ module predictor(input wire request, result, clk, taken, output reg prediction);
 
 reg [1:0] state = 2'b11;
 
-always @(clk) begin
+always @(posedge clk) begin
 
     if (result)
     begin
@@ -13,9 +13,7 @@ always @(clk) begin
     end
 
     if(request)
-    begin
         prediction = state[1];
-    end
 
 
 end
