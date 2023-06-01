@@ -1,6 +1,6 @@
 module predictor(input wire request, result, clk, taken, output reg prediction);
 
-reg [1:0] state;
+reg [1:0] state = 0;
 
 always @(clk) begin
 
